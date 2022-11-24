@@ -1,0 +1,37 @@
+<h1 id="tableLabel">Clientes</h1>
+
+<p>Cadastro básico de clientes.</p>
+
+<p *ngIf="!clientes"><em>Loading...</em></p>
+
+<ul class="navbar-nav flex-grow">
+
+  <li class="nav-item" [routerLinkActive]="['link-active']">
+    <a class="nav-link text-dark" [routerLink]="['/adicionar-cliente']">Adicionar</a>
+  </li>
+
+</ul>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="clientes">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Data Nasc.</th>
+      <th> </th>
+      <th> </th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cliente of clientes">
+      <td>{{ cliente.id }}</td>
+      <td>{{ cliente.nome }}</td>
+      <td>{{ cliente.email }}</td>
+      <td>{{ cliente.dataNascimento | date: 'dd/MM/YYYY' }}</td>
+      <td><a [routerLink]="['/clientes','visualizar',cliente.id]">Visualizar</a></td>
+      <td><a [routerLink]="['/contatocliente','contatos',cliente.id]">Contatos</a></td>
+    </tr>
+  </tbody>
+</table>

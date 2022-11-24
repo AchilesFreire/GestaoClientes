@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestaoClientes", "GestaoClientes\GestaoClientes.csproj", "{5012883D-5F53-4E44-BA19-A8B0194F3ECB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicoGestaoClientes", "ServicoGestaoClientes\ServicoGestaoClientes.csproj", "{DAAD4CD3-9680-4C7A-946F-D4B6133FF2EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5012883D-5F53-4E44-BA19-A8B0194F3ECB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5012883D-5F53-4E44-BA19-A8B0194F3ECB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5012883D-5F53-4E44-BA19-A8B0194F3ECB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5012883D-5F53-4E44-BA19-A8B0194F3ECB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAAD4CD3-9680-4C7A-946F-D4B6133FF2EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAAD4CD3-9680-4C7A-946F-D4B6133FF2EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAAD4CD3-9680-4C7A-946F-D4B6133FF2EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAAD4CD3-9680-4C7A-946F-D4B6133FF2EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6B99B238-5F25-4C96-A0DE-CD53EF757B1C}
+	EndGlobalSection
+EndGlobal

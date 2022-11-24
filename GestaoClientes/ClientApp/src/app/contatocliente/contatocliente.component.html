@@ -1,0 +1,30 @@
+<h1 id="tableLabel">Contatos do cliente</h1>
+
+<p *ngIf="!contatocliente"><em>Carregando...</em></p>
+
+<ul class="navbar-nav flex-grow">
+
+  <li class="nav-item" [routerLinkActive]="['link-active']">
+    <a class="nav-link text-dark" [routerLink]="['/adicionar-contatocliente', this.clienteselecionado]">Adicionar</a>
+  </li>
+
+</ul>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="contatocliente">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Tipo de Contato</th>
+      <th>Número</th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let contato of contatocliente">
+      <td>{{ contato.id }}</td>
+      <td>{{ contato.refTipoContato.nome }}</td>
+      <td>{{ contato.numero }}</td>
+      <td><a [routerLink]="['/contatocliente','visualizar',contato.id]">Visualizar</a></td>
+    </tr>
+  </tbody>
+</table>

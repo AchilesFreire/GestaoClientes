@@ -1,0 +1,19 @@
+<div class="container my=5">
+  <h1 class="mb-3">Novo Tipo de Contato</h1>
+
+
+    <div class="row">
+      <div class="col-6">
+        <form #form="ngForm" (ngSubmit)="AdicionarTipoContato()">
+          <div class="mb-3">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="hidden" class="form-control" id="id" name="id" [(ngModel)]="AdicionarTipoContatoRequest.id">
+            <input type="text" class="form-control" id="nome" name="nome" maxlength="100" [(ngModel)]="AdicionarTipoContatoRequest.nome">
+          </div>
+          <button type="submit" class="btn btn-primary">Salvar</button>
+        </form>
+      </div>
+    </div>
+
+
+</div>

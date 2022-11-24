@@ -1,0 +1,29 @@
+<div class="container my=5">
+  <h1 class="mb-3">Novo Cliente</h1>
+
+
+    <div class="row">
+      <div class="col-6">
+        <form #form="ngForm" (ngSubmit)="AdicionarCliente()">
+          <div class="mb-3">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="hidden" class="form-control" id="id" name="id" [(ngModel)]="AdicionarClienteRequest.id">
+            <input type="text" class="form-control" id="nome" name="nome" maxlength="100" [(ngModel)]="AdicionarClienteRequest.nome">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" maxlength="255" aria-describedby="emailHelp"  [(ngModel)] ="AdicionarClienteRequest.email">
+            <div id="emailHelp" class="form-text">Nunca iremos divulgar seu email.</div>
+          </div>
+          <div class="mb-3">
+            <label for="dataNascimento" class="form-label">Data de Nascimento</label>
+            <input type="date" class="form-control" id="dataNascimento" name="dataNascimento"  [(ngModel)] ="AdicionarClienteRequest.dataNascimento">
+          </div>
+
+          <button type="submit" class="btn btn-primary">Salvar</button>
+        </form>
+      </div>
+    </div>
+
+
+</div>

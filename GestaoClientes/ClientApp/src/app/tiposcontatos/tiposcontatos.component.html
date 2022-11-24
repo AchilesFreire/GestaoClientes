@@ -1,0 +1,28 @@
+<h1 id="tableLabel">Tipos de Contatos</h1>
+
+<p *ngIf="!tiposcontatos"><em>Carregando...</em></p>
+
+<ul class="navbar-nav flex-grow">
+
+  <li class="nav-item" [routerLinkActive]="['link-active']">
+    <a class="nav-link text-dark" [routerLink]="['/adicionar-tipocontato']">Adicionar</a>
+  </li>
+
+</ul>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="tiposcontatos">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Nome</th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let tipocontato of tiposcontatos">
+      <td>{{ tipocontato.id }}</td>
+      <td>{{ tipocontato.nome }}</td>
+      <td><a [routerLink]="['/tiposcontatos','visualizar',tipocontato.id]">Visualizar</a></td>
+    </tr>
+  </tbody>
+</table>
